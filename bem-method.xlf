@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:okp="okapi-framework:xliff-extensions" version="1.2">
+  <file original="guides/libs-dev-principles.ru.md.html" source-language="ru" target-language="en" datatype="html" build-num="452">
+    <body>
+      <trans-unit id="tu1" resname="----id" restype="x-h1" xml:space="preserve">
+<source xml:lang="ru">Принципы разработки БЭМ-библиотек</source>
+</trans-unit>
+      <trans-unit id="tu2" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">В основе этих принципов — совокупный опыт работы нашей команды. Мы учли все лучшее из прошлого, чтобы при разработке новых библиотек не повторять прежних ошибок. Мы призываем сообщество ориентироваться на эти правила при использовании и разработке БЭМ-библиотек.</source>
+</trans-unit>
+      <trans-unit id="tu3" resname="---id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Открытый исходный код</source>
+</trans-unit>
+      <trans-unit id="tu4" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Разработка библиотеки ведется на GitHub, где доступны все задачи, планы и сроки. Любой разработчик может принять участие в работе над библиотекой: создать задачу с пожеланиями для команды или прислать пулреквест.</source>
+</trans-unit>
+      <trans-unit id="tu5" resname="--id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Простота использования</source>
+</trans-unit>
+      <trans-unit id="tu6" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Библиотека должна быть максимально простой. Откажитесь от всего, что может расцениваться или использоваться неоднозначно.</source>
+</trans-unit>
+      <trans-unit id="tu7" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Минимализм</source>
+</trans-unit>
+      <trans-unit id="tu8" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Проектируя необходимую функциональность, стремитесь к пересечению, а не объединению потребностей. В ситуации выбора предпочтителен тот вариант, который решает задачу меньшим количеством кода, БЭМ-сущностей или проще в поддержке.</source>
+</trans-unit>
+      <trans-unit id="tu9" resname="--id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Покрытие тестами</source>
+</trans-unit>
+      <trans-unit id="tu10" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Код библиотеки должен быть на 100% покрыт тестами. Это гарантирует меньшее число ошибок и экономию времени на поддержку в будущем. Код не считается законченным и стабильным, пока он не покрыт тестами. Пулреквесты без добавления или изменения тестов не принимаются.</source>
+</trans-unit>
+      <trans-unit id="tu11" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Единообразие</source>
+</trans-unit>
+      <trans-unit id="tu12" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Все названия полей и методов должны быть унифицированы в рамках одной или нескольких совместимых библиотек. Если в блоке методы, модификаторы или поля называются определенным образом, то в похожей задаче нужно придерживаться той же логики именования. Последовательность и согласованность всех сущностей должны быть доведены до абсолюта и поставлены во главу угла. Важно, чтобы логика именования была понятна и другим разработчикам, которые будут использовать библиотеку или модифицировать ее код.</source>
+</trans-unit>
+      <trans-unit id="tu13" resname="-----api-id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Разделение на приватный и публичный API</source>
+</trans-unit>
+      <trans-unit id="tu14" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Приватный API блока не должен использоваться вне этого блока.</source>
+</trans-unit>
+      <trans-unit id="tu16" restype="x-data-url" xml:space="preserve">
+<source xml:lang="ru">http://semver.org</source>
+</trans-unit>
+      <trans-unit id="tu15" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Публичный API следует делать минималистичным, не предоставляя ничего лишнего. Обязательно указывайте в документации возможные способы его использования: в BEMJSON, JavaScript или обоими способами. Стабильность публичного API гарантируется соблюдением правил <bpt id="1">&lt;a href="http://semver.org" [#$tu16]&gt;</bpt>семантического версионирования<ept id="1">&lt;/a&gt;</ept>.</source>
+</trans-unit>
+      <trans-unit id="tu17" resname="---id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Тонкая настройка пользователем</source>
+</trans-unit>
+      <trans-unit id="tu18" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">В процессе разработки заранее продумывайте и учитывайте возможности для тонкой настройки кода на стороне пользователя.</source>
+</trans-unit>
+      <trans-unit id="tu19" resname="---id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Поддержка нескольких тем</source>
+</trans-unit>
+      <trans-unit id="tu20" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Библиотека должна поддерживать несколько тем. Это позволит корректно создавать правила форматирования для каждого стиля, а также избежать конфликтов с новыми темами.<ph id="1">&lt;br /&gt;</ph>Сейчас основная тема БЭМ-библиотек — islands, в ней выполнен новый дизайн сервисов Яндекса. Реализация нескольких тем внутри одной библиотеки представлена в bem-components, где вместе с islands есть дополнительная тема simple.</source>
+</trans-unit>
+      <trans-unit id="tu21" resname="----javascript-api-id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Явное лучше неявного (в JavaScript API)</source>
+</trans-unit>
+      <trans-unit id="tu22" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Название метода должно максимально точно отражать суть и сразу давать понять, что он реализует. Такой подход позволяет снизить порог входа и сделать API более понятным.</source>
+</trans-unit>
+      <trans-unit id="tu23" resname="--bemjson-api-id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Сокращения в BEMJSON API</source>
+</trans-unit>
+      <trans-unit id="tu24" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Явное лучше неявного, но в некоторых случаях в API допустимо использовать сокращения. Произвольные куски BEMJSON можно передавать только там, где это действительно необходимо — например, если сущность по своей семантике является оберткой или контейнером. Для сложных блоков, где генерация содержимого и есть внутренний API, нужно создавать сокращения, опуская поле content. Это уменьшит объем входного BEMJSON и позволит безболезненно менять внутреннее устройство сложных блоков.</source>
+</trans-unit>
+      <trans-unit id="tu25" resname="--id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Явные умолчания</source>
+</trans-unit>
+      <trans-unit id="tu26" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Умолчания должны быть явно задекларированы — это внешний API. Любые их изменения препятствуют обратной совместимости. Неявные и нигде не описанные умолчания создают проблемы в поддержке библиотеки.</source>
+</trans-unit>
+      <trans-unit id="tu27" resname="--id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Обработка ошибок</source>
+</trans-unit>
+      <trans-unit id="tu28" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Входные данные следует проверять перед использованием, генерируя в случае ошибки исключение, которое может быть обработано в вызывающем коде.<ph id="1">&lt;br /&gt;</ph>Обработка ошибок должна происходить единообразно во всей библиотеке: не стоит добавлять в блок сложную валидацию данных, если в аналогичном случае она не происходит.</source>
+</trans-unit>
+      <trans-unit id="tu29" resname="---id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Предметная область БЭМ</source>
+</trans-unit>
+      <trans-unit id="tu30" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Все, что может выражаться через БЭМ-сущность, должно через нее выражаться.</source>
+</trans-unit>
+      <trans-unit id="tu31" resname="--vs.-----id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">БЭМ-события vs. события на изменение модификаторов</source>
+</trans-unit>
+      <trans-unit id="tu32" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Не нужно создавать БЭМ-событие или подписываться на него, если есть возможность работать с событием на изменение модификатора.</source>
+</trans-unit>
+      <trans-unit id="tu33" resname="-vs.---id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Модификаторы vs. специализированные поля</source>
+</trans-unit>
+      <trans-unit id="tu34" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Модификатор — это заранее известный набор положений или состояний. Специализированное поле — заранее неизвестный набор вариативных значений.<ph id="1">&lt;br /&gt;</ph>Все, что может быть выражено в виде конечного набора значений, нужно реализовывать модификатором. Где это невозможно, используйте специализированные поля.</source>
+</trans-unit>
+      <trans-unit id="tu35" resname="-vs.--vs.--id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Композиция vs. наследование vs. делегирование</source>
+</trans-unit>
+      <trans-unit id="tu36" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Используйте ООП только там, где это оправдано. В остальных случаях следует применять миксы, делегирование и композицию.</source>
+</trans-unit>
+      <trans-unit id="tu37" resname="--id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Иерархия блоков</source>
+</trans-unit>
+      <trans-unit id="tu38" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Взаимодействие между блоками следует строить снизу вверх. Блок может взаимодействовать только с подмешанными и вложенными блоками, но не с внешними или соседними.</source>
+</trans-unit>
+      <trans-unit id="tu39" resname="----id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Оптимизация на уровне блока</source>
+</trans-unit>
+      <trans-unit id="tu40" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Решения по оптимизации должны внедряться во время разработки каждого конкретного блока. Заранее продумывайте возможные пути оптимизации, чтобы в дальнейшем их было проще реализовать в уже написанном коде.</source>
+</trans-unit>
+      <trans-unit id="tu41" resname="---id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Автоматизация рутинных процессов</source>
+</trans-unit>
+      <trans-unit id="tu42" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Все повторяющиеся действия, такие как вставка картинок, расстановка префиксов, копирование стилей, следует автоматизировать. Разработчик не должен заниматься рутиной, для этого есть роботы.</source>
+</trans-unit>
+      <trans-unit id="tu43" resname="-----id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Мобильные платформы без адаптивной верстки</source>
+</trans-unit>
+      <trans-unit id="tu45" restype="x-data-url" xml:space="preserve">
+<source xml:lang="ru">https://github.com/bem/bem-components/blob/current/README.ru.md#supported-browsers</source>
+</trans-unit>
+      <trans-unit id="tu46" restype="x-data-url" xml:space="preserve">
+<source xml:lang="ru">https://github.com/bem/bem-components/blob/current/README.ru.md</source>
+</trans-unit>
+      <trans-unit id="tu44" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Библиотека должна поддерживать мобильные платформы. Использовать адаптивную верстку не рекомендуется. Библиотека должна работать во всех браузерах, поддержку которых вы заявляете: допускаются деградации только стилевого оформления компонентов, но не их функциональности. Код на уровне common и desktop должен работать на тач-устройствах. Для примера ознакомьтесь со <bpt id="1">&lt;a href="https://github.com/bem/bem-components/blob/current/README.ru.md#supported-browsers" [#$tu45]&gt;</bpt>списком поддерживаемых браузеров<ept id="1">&lt;/a&gt;</ept> библиотеки <bpt id="2">&lt;a href="https://github.com/bem/bem-components/blob/current/README.ru.md" [#$tu46]&gt;</bpt>bem-components<ept id="2">&lt;/a&gt;</ept>.</source>
+</trans-unit>
+      <trans-unit id="tu47" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Доступность</source>
+</trans-unit>
+      <trans-unit id="tu48" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Компоненты библиотеки должны быть доступны для чтения программами экранного доступа, но расширять для этого публичный API не следует. Выставление всех необходимых ARIA-атрибутов реализуется на уровне шаблонов и скриптов.</source>
+</trans-unit>
+      <trans-unit id="tu49" resname="bleeding-edge-id" restype="x-h4" xml:space="preserve">
+<source xml:lang="ru">Bleeding edge</source>
+</trans-unit>
+      <trans-unit id="tu50" restype="x-paragraph" xml:space="preserve">
+<source xml:lang="ru">Библиотека разрабатывается с ориентацией на будущее. Всегда используйте последние версии браузеров и инструментов, чтобы сохранить ее актуальность в процессе разработки как можно дольше.</source>
+</trans-unit>
+    </body>
+  </file>
+</xliff>
